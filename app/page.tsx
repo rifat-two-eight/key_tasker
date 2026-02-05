@@ -5,6 +5,7 @@ import Benefits from "@/components/Benefits";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Feedback from "@/components/Feedback";
 import Faq from "@/components/Faq";
+import CallToAction from "@/components/CallToAction";    
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyChooseUs />
       <Feedback />
       <Faq />
+      <CallToAction />
       <Footer />
     </main>
   );

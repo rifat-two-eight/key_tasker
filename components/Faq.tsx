@@ -1,44 +1,76 @@
-
 const Faq = () => {
-    const faqs = [
-        {
-            question: "Is there a free trial?",
-            answer: "Yes, we offer a 14-day free trial so you can experience all the premium features."
-        },
-        {
-            question: "Can I collaborate with my team?",
-            answer: "Absolutely! KeyTasker is built for collaboration. You can invite team members and assign tasks seamlessly."
-        },
-        {
-            question: "Is my data secure?",
-            answer: "Security is our top priority. We use industry-standard encryption to protect your data."
-        },
-        {
-            question: "How do I upgrade my plan?",
-            answer: "You can upgrade your plan at any time from your account settings."
-        }
-    ];
+  const faqs = [
+    {
+      question: "How do I start earning?",
+      answer:
+        "Sign up for a free account, complete your profile, and browse the 'Tasks' section. Pick any task that is available and follow the instructions provided.",
+    },
+    {
+      question: "What is crowd moderation?",
+      answer:
+        "Crowd moderation is a community-driven system where qualified users review proof submissions to ensure accuracy and fairness.",
+    },
+    {
+      question: "How do I become a moderator?",
+      answer:
+        "Consistent high-quality work and a good reputation score can qualify you to become a moderator and earn additional rewards.",
+    },
+    {
+      question: "When can I withdraw my money?",
+      answer:
+        "You can request a withdrawal once your approved balance reaches the minimum payout threshold, which is typically processed within 24-48 hours.",
+    },
+    {
+      question: "Are my screenshots secure?",
+      answer:
+        "Yes, all submissions are encrypted and only visible to the necessary parties for verification purposes.",
+    },
+  ];
 
   return (
-    <section className="bg-gray-900 py-24">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-          <div className="mx-auto max-w-screen-md text-center mb-16">
-              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">Frequently Asked Questions</h2>
-              <p className="text-gray-400 sm:text-xl">Have questions? We have answers.</p>
-          </div>
-          <div className="grid pt-8 text-left border-t border-gray-700 md:gap-16 dark:border-gray-700 md:grid-cols-2">
-              {faqs.map((faq, index) => (
-                   <div key={index} className="mb-10">
-                      <h3 className="flex items-center mb-4 text-lg font-medium text-white">
-                          <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 111.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg>
-                          {faq.question}
-                      </h3>
-                      <p className="text-gray-400">
-                          {faq.answer}
-                      </p>
-                  </div>
-              ))}
-          </div>
+    <section className="bg-white py-24 text-black">
+      <div className="py-8 px-4 mx-auto max-w-6xl lg:py-16 lg:px-6">
+        <div className="text-center mb-16">
+          <span className="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
+            FAQ
+          </span>
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
+            Frequently Asked <span className="text-[#5956E9]">Questions</span>
+          </h2>
+          <p className="text-gray-500 sm:text-xl">
+            Everything you need to know about getting started.
+          </p>
+        </div>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <details
+              key={index}
+              className="group bg-white rounded-lg border border-gray-100 [&_summary::-webkit-details-marker]:hidden"
+              open={index === 0}
+            >
+              <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-gray-900 font-bold hover:bg-gray-50 transition-colors rounded-lg group-open:rounded-b-none group-open:bg-white group-open:pb-4 group-open:text-[#5956E9]">
+                <h2 className="">{faq.question}</h2>
+                <svg
+                  className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180 text-gray-400 group-open:text-[#5956E9]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 pt-0 leading-relaxed text-gray-500 text-sm">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
   );
