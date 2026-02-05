@@ -1,53 +1,107 @@
 
 const HowItWorks = () => {
-    const steps = [
-      {
-        title: "Sign Up",
-        description: "Create your free account in seconds and set up your workspace.",
-        icon: (
-            <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-        )
-      },
-      {
-        title: "Create Tasks",
-        description: "Organize your work by creating tasks, setting deadlines, and assigning priorities.",
-         icon: (
-            <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-         )
-      },
-      {
-        title: "Track Progress",
-        description: "Monitor your team's progress with real-time dashboards and analytics.",
-         icon: (
-            <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-         )
-      },
-      {
-          title: "Achieve Goals",
-          description: "Complete projects on time and celebrate your success with KeyTasker.",
-           icon: (
-            <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-           )
-      }
-    ];
-  
     return (
-      <section className="bg-gray-900 py-24">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">How It Works</h2>
-            <p className="text-gray-400 sm:text-xl">Simple steps to get you up and running with KeyTasker.</p>
-          </div>
-          <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:space-y-0">
-            {steps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center text-center p-6 bg-gray-800 rounded-xl hover:bg-gray-750 transition-colors border border-gray-700 shadow-lg">
-                <div className="flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-gray-700/50 ring-1 ring-white/10">
-                   {step.icon}
+      <section className="bg-white py-24 overflow-hidden">
+        <div className="max-w-screen-xl px-4 mx-auto lg:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column: Feature Cards - Masonry/Grid feel */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                {/* Card 1: Pick a Category (Blue) */}
+                <div className="p-8 rounded-3xl bg-[#5956E9] text-white shadow-xl transform transition hover:-translate-y-1">
+                    <div className="w-12 h-12 mb-6 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Pick a Category</h3>
+                    <p className="text-blue-100 text-sm leading-relaxed">Choose from Social, Email, Freelance, and more.</p>
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-white">{step.title}</h3>
-                <p className="text-gray-400">{step.description}</p>
-              </div>
-            ))}
+
+                {/* Card 2: Fast Submissions (White) - Shifted down slightly on desktop for staggered look if needed, but grid is fine */}
+                <div className="p-8 rounded-3xl bg-white border border-gray-100 text-gray-900 shadow-lg transform transition hover:-translate-y-1 mt-0 sm:mt-12">
+                     <div className="w-12 h-12 mb-6 rounded-full bg-orange-100 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Fast Submissions</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">Upload screenshots and get results in moments.</p>
+                </div>
+
+                {/* Card 3: Crowd Review (White) */}
+                <div className="p-8 rounded-3xl bg-white border border-gray-100 text-gray-900 shadow-lg transform transition hover:-translate-y-1">
+                    <div className="w-12 h-12 mb-6 rounded-full bg-blue-50 flex items-center justify-center">
+                         <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Crowd Review</h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">Your evidence is reviewed by the community for fairness.</p>
+                </div>
+
+                 {/* Card 4: Secure Payouts (Dark Blue) */}
+                 <div className="p-8 rounded-3xl bg-[#1E1B4B] text-white shadow-xl transform transition hover:-translate-y-1 mt-0 sm:mt-12">
+                     <div className="w-12 h-12 mb-6 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                     </div>
+                    <h3 className="text-xl font-bold mb-2">Secure Payouts</h3>
+                    <p className="text-indigo-200 text-sm leading-relaxed">Verified ledger system ensures your money is always safe.</p>
+                </div>
+
+            </div>
+
+             {/* Right Column: Steps */}
+             <div className="lg:pl-16 mt-16 lg:mt-0">
+                <div className="inline-block px-4 py-2 mb-6 text-xs font-bold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-lg">
+                    How it works
+                </div>
+                <h2 className="mb-12 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+                    The most efficient way <br/> to <span className="text-[#5956E9]">earn money</span>
+                </h2>
+
+                <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+                    {/* Step 1 */}
+                    <div className="relative flex items-start group">
+                        <div className="absolute left-0 flex items-center justify-center w-10 h-10 ml-0 bg-[#E0E7FF] rounded-full group-hover:bg-[#5956E9] transition-colors z-10 shrink-0">
+                            <span className="font-bold text-[#5956E9] group-hover:text-white">1</span>
+                        </div>
+                        <div className="ml-16">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Select a Task</h3>
+                            <p className="text-gray-500 leading-relaxed">Browse our high-paying marketplace for a task that fits your skills.</p>
+                        </div>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="relative flex items-start group">
+                         <div className="absolute left-0 flex items-center justify-center w-10 h-10 ml-0 bg-[#E0E7FF] rounded-full group-hover:bg-[#5956E9] transition-colors z-10 shrink-0">
+                            <span className="font-bold text-[#5956E9] group-hover:text-white">2</span>
+                        </div>
+                        <div className="ml-16">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Perform Action</h3>
+                            <p className="text-gray-500 leading-relaxed">Follow simple instructions to complete the micro-task correctly.</p>
+                        </div>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="relative flex items-start group">
+                         <div className="absolute left-0 flex items-center justify-center w-10 h-10 ml-0 bg-[#E0E7FF] rounded-full group-hover:bg-[#5956E9] transition-colors z-10 shrink-0">
+                            <span className="font-bold text-[#5956E9] group-hover:text-white">3</span>
+                        </div>
+                        <div className="ml-16">
+                             <h3 className="text-xl font-bold text-gray-900 mb-2">Submit Evidence</h3>
+                             <p className="text-gray-500 leading-relaxed">Provide screenshots and an AI-assisted guess for rapid processing.</p>
+                        </div>
+                    </div>
+
+                    {/* Step 4 */}
+                    <div className="relative flex items-start group">
+                        <div className="absolute left-0 flex items-center justify-center w-10 h-10 ml-0 bg-[#E0E7FF] rounded-full group-hover:bg-[#5956E9] transition-colors z-10 shrink-0">
+                            <span className="font-bold text-[#5956E9] group-hover:text-white">4</span>
+                        </div>
+                        <div className="ml-16">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Get Paid</h3>
+                            <p className="text-gray-500 leading-relaxed">Watch your balance grow and withdraw to your preferred method.</p>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
           </div>
         </div>
       </section>
