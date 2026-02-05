@@ -2,19 +2,19 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden bg-white">
+    <section className="relative pt-32 h-[90vh] md:h-[100vh] pb-20 overflow-hidden bg-white">
       {/* Background Pattern */}
-      <div className="absolute inset-0 z-0 opacity-100">
+      <div className="absolute inset-0 z-0 mt-15 opacity-100">
          <Image
-            src="/hero1.jpg"
+            src="/hero.png"
             alt="Background Pattern"
             fill
-            className="object-cover object-left"
+            className=""
             priority
          />
       </div>
 
-      <div className="relative z-10 grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div className="relative mt-20 z-10 grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7">
             {/* Badge */}
             <div className="inline-flex items-center px-3 py-1 mb-6 text-xs font-semibold text-blue-800 bg-blue-100 rounded-full">
@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">
+            <h1 className="max-w-2xl mb-4 leading-15 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
                 A Smarter Platform for <br className="hidden lg:block"/> Structured Micro-Earnings
             </h1>
 
@@ -54,19 +54,7 @@ const Hero = () => {
                     Trusted by <span className="font-bold text-gray-900">50,000+</span> active earners
                 </div>
              </div>
-        </div>
-        
-        {/* Right Image */}
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex relative">
-            <Image 
-                src="/hero2.png" 
-                alt="Happy earner using laptop" 
-                width={600} 
-                height={600}
-                className="relative z-10 object-contain drop-shadow-2xl"
-                priority
-            />
-        </div>                
+        </div>             
       </div>
     </section>
   );
