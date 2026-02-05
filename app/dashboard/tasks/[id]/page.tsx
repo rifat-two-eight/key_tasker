@@ -5,7 +5,7 @@ export default function TaskDetails({ params }: { params: { id: string } }) {
   // For now, we mock static content matching the screenshot
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="w-full mx-auto">
       {/* Breadcrumb / Back */}
       <div className="mb-6">
         <Link href="/dashboard/tasks" className="flex items-center text-sm font-bold text-gray-500 hover:text-gray-900">
